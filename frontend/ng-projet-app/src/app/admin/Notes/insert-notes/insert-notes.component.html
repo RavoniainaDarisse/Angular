@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Ajouter des notes</h2>
+    <div *ngIf="addForm">
+        <form [formGroup]="addForm">
+            <div class="form-group">
+                <label for="etudiant">Étudiant :</label>
+                <select class="form-control" formControlName="Nom" name="Nom" id="etudiant">
+                    <option *ngFor="let std of student"  value="{{std.id}}">{{std.Nom}}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="matiere">Matière :</label>
+                <select class="form-control" formControlName="Codemat" name="Codemat" id="matiere">
+                    <option *ngFor="let mt of matiere" 
+                        value="{{mt.id_matiere}}">{{mt.Codemat}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="note">Note :</label>
+                <input type="text" class="form-control" formControlName="note" name="note" id="note">
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Ajouter</button>
+        </form>
+    </div>
+</div>

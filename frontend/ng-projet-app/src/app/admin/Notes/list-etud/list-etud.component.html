@@ -1,0 +1,28 @@
+
+<div class="container">
+  
+    <h1>Liste des étudiants</h1>
+    <div>
+      <a routerLink="/admin/add" class="btn btn-success m-2">Ajout D'etudiant</a>
+      <a routerLink="/admin/addM" class="btn btn-success m-2">Ajout Matiere</a>
+      <a routerLink="/admin/addN" class="btn btn-success m-2">Ajout Notes</a>
+      </div>
+      <a routerLink="/admin/view" class="btn btn-success m-2">Etudiant</a>
+      <a routerLink="/admin/viewM" class="btn btn-success m-2">Matiere</a>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let std of student" >
+          <td>{{std.Nom}}</td>
+          <td>{{std.Prenom}}</td>
+          <td>---</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

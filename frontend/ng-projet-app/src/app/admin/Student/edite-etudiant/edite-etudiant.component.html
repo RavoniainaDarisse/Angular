@@ -1,0 +1,33 @@
+<div class="col-md-6">
+    <h2>Modification</h2>
+    <!-- <div *ngIf="addForm"> -->
+    <form [formGroup]="addForm" novalidate class="" method="PUT">
+        <div class="form-group">
+            <label for="Name">Nom Etudiant</label>
+            <input type="text" formControlName="Nom" name="Nom" placeholder=" Nom Etudiant..."
+                class="form-control">
+
+        </div>
+        <div class="form-group">
+            <label for="Name">Prenom Etudiant</label>
+            <input type="text" formControlName="Prenom" name="Prenom" placeholder=" Prenom Etudiant..."
+                class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="Name">Niveau Etudiant</label>
+            <input type="text" formControlName="Niveau" name="Niveau" placeholder=" Niveau Etudiant..."
+                class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="Name">Numero Matricule Etudiant</label>
+            <input type="text" formControlName="Numero_Net" name="Numero_Net" placeholder=" Numero Matricule Etudiant..."
+                class="form-control">
+        </div>
+
+        <button class="btn btn-success " type="submit" (click)="onEdit()">Enregistrez</button>
+
+    </form>
+
+    <a routerLink="/admin/view" class="btn btn-success my-2">Voir la Liste des Etudiants</a>
+</div>
+<!-- </div> -->

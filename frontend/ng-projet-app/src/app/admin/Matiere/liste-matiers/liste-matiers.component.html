@@ -1,0 +1,19 @@
+<div class="container">
+    <input type="text" [(ngModel)]="searchValue"  placeholder="Search..." 
+    class="py-2 px-2  w-50">
+    <h1>Liste des Matieres</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Matieres</th>
+          <th>Coefficient</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let matiere of matiere | searchFilter : searchValue : ['Codemat']" >
+          <td>{{matiere.Codemat}}</td>
+          <td>{{matiere.Coef}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

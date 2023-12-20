@@ -1,0 +1,13 @@
+.f{
+    display: flex;
+    flex-wrap: wrap;
+}
+.between{
+    justify-content: space-between;
+}
+.relat{
+    position: relative;
+}
+.abs{
+    position: absolute;
+}

@@ -1,0 +1,45 @@
+
+<div class="container my-5">
+   
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Listes des etudiant</h6>
+
+    </div>
+    <input type="text" [(ngModel)]="searchValue"  placeholder="Search..." 
+    class="py-2 px-2  w-50  ">
+    
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="text-gray-600">Nom</th>
+                        <th class="text-gray-600">Prenom</th>
+                        <th class="text-gray-600">Niveau</th>
+                        <th class="text-gray-600">Matricule</th>
+                        <th class="text-gray-600">Modifier</th>
+                        <th class="text-gray-600">Supprimer</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th class="text-gray-600">Nom</th>
+                        <th class="text-gray-600">Prenom</th>
+                        <th class="text-gray-600">Niveau</th>
+                        <th class="text-gray-600">Matricule</th>
+                        <th class="text-gray-600">Modifier</th>
+                        <th class="text-gray-600">Supprimer</th>
+                    </tr>
+                </tfoot>
+                <tbody *ngFor="let std of students | searchFilter : searchValue : ['Nom','Niveau'] ">
+                    <tr>
+                        <td class="text-gray-600">{{std.Nom}}</td>
+                        <td class="text-gray-600">{{std.Prenom}}</td>
+                        <td class="text-gray-600">{{std.Niveau}}</td>
+                        <td class="text-gray-600">{{std.Numero_Net}}</td>
+                        <td><button class="btn btn-primary " type="submit" (click)="edit(std)">Modifier</button></td>
+                        <td><button class="btn btn-danger" type="submit" (click)="delete(std)">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>

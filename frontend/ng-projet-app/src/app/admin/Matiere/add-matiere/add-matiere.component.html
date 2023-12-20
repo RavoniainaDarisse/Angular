@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Ajout Matiere</h2>
+    <div *ngIf="addForm">
+        <form [formGroup]="addForm" novalidate class="">
+            <div class="form-group">
+                <label for="Matiere">Matiere</label>
+                <input type="text" formControlName="Codemat" name="Codemat" placeholder=" Codemat..." class="form-control">
+
+            </div>
+            <div class="form-group">
+                <label for="Libelle">Libelle</label>
+                <input type="text" formControlName="Libelle" name="Libelle" placeholder=" Libelle..."
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Coef">Coefficient</label>
+                <input type="int" formControlName="Coef" name="Coef" placeholder=" Coefficient.."
+                    class="form-control">
+            </div>
+
+            <button class="btn btn-primary my-2 " type="submit" (click)="onSubmit()">Enregistrez</button>
+
+        </form>
+    </div>
+</div>

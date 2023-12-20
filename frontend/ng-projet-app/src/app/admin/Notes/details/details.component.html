@@ -1,0 +1,38 @@
+<div class="container my-5">
+
+  <div class="card shadow my-4">
+      <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Listes des Notes globale</h6>
+      </div>
+      <div class="card-body">
+          <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                      <tr>
+                        <th class="text-gray-600">Matiere</th>
+                        <th class="text-gray-600">Etudiant</th>
+                        <th class="text-gray-600">Note</th>
+                        <th class="text-gray-600">Modifier</th>
+                        <th class="text-gray-600">Supprimer</th>
+                      </tr>
+                  </thead>
+                  <tfoot>
+                      <tr>
+                          <th class="text-gray-600">Matiere</th>
+                          <th class="text-gray-600">Etudiant</th>
+                          <th class="text-gray-600">Note</th>
+                          <th class="text-gray-600">Modifier</th>
+                          <th class="text-gray-600">Supprimer</th>
+                      </tr>
+                  </tfoot>
+                  <tbody *ngFor="let std of note">
+                      <tr>
+                          <td class="text-gray-600">{{std.matiere_id}}</td>
+                          <td class="text-gray-600">{{std.etudiant_id}}</td>
+                          <td class="text-gray-600">{{std.note}}</td>
+                          <td><button class="btn btn-primary " type="submit">Modifier</button>
+                          </td>
+                          <td><button class="btn btn-danger" type="submit" >Remove</button></td>
+                      </tr>
+                  </tbody>
+              </table>

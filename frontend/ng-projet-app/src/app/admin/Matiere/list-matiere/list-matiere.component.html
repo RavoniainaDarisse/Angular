@@ -1,0 +1,38 @@
+<div class="container my-5">
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Listes des Matieres</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="text-gray-600">Matiere</th>
+                            <th class="text-gray-600">Libelle</th>
+                            <th class="text-gray-600">Coefficient</th>
+                            <th class="text-gray-600">Modifier</th>
+                            <th class="text-gray-600">Supprimer</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th class="text-gray-600">Matiere</th>
+                            <th class="text-gray-600">Libelle</th>
+                            <th class="text-gray-600">Coefficient</th>
+                            <th class="text-gray-600">Modifier</th>
+                            <th class="text-gray-600">Supprimer</th>
+                        </tr>
+                    </tfoot>
+                    <tbody *ngFor="let std of matiere">
+                        <tr>
+                            <td class="text-gray-600">{{std.Codemat}}</td>
+                            <td class="text-gray-600">{{std.Libelle}}</td>
+                            <td class="text-gray-600">{{std.Coef}}</td>
+                            <td><button class="btn btn-primary " type="submit" (click)="edit(std)">Modifier</button>
+                            </td>
+                            <td><button class="btn btn-danger" type="submit" (click)="delete(std)">Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>

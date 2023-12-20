@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
+}
+
+head {
+    height: 80px;
+}
+
+.logo {
+    margin: 20px;
+    font-weight: 800;
+    font-size: 50px;
+    color: #494545;
+}
+
+nav ul li {
+    margin: 20px;
+    font-size: 24px;
+}
+
+/* BLOG1 */
+.f{
+    display: flex;
+    flex-wrap: wrap;
+}
+.between{
+    justify-content: space-between;
+}
+.relat{
+    position: relative;
+}
+.abs{
+    position: absolute;
+}
+
+.bg-1 {
+    background: url(".../../../../../assets/images/education-students-smiling-young-asian-woman-with-backpack-notebooks-posing-against-blue-bact3452.jpg");
+    width: 799px;
+    height: 799px;
+    border-radius: 50% !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* margin: 60px auto 0 0; */
+    margin-left: 20px;
+    margin-top: 70px;
+}
+
+.u-svg-content {
+    width: 250px;
+    height: 156px;
+    fill: #db545a;
+}
+
+.img-2 {
+    left: 51%;
+    /* top: 0%; */
+    bottom: 83%;
+}
+
+.img-3 {
+    left: 29px;
+}
+
+.desc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 413px;
+    left: 635px;
+    padding: 30px;
+    max-width: 403px;
+    border: 5px solid #db545a;
+    background-color: aliceblue;
+}
+
+.desc h1 {
+    color: #db545a !important;
+    font-size: 4rem;
+    line-height: 1.1;
+    /* font-weight: 700; */
+}
+
+.desc p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.img-4 {
+    width: 25%;
+    height: 41%;
+    border-radius: 50%;
+    background-color: #db545a;
+    top: 763px;
+    left: 831px;
+}

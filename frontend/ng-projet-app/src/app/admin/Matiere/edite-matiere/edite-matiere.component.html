@@ -1,0 +1,26 @@
+<div class="col-md-6">
+    <h2>Modification</h2>
+    <div >
+        <!-- <form [formGroup]="addForm" novalidate class=""> -->
+            <div class="form-group">
+                <label for="Matiere">Matiere</label>
+                <input type="text" formControlName="Codemat" name="Codemat" placeholder=" Codemat..." class="form-control">
+
+            </div>
+            <div class="form-group">
+                <label for="Libelle">Libelle</label>
+                <input type="text" formControlName="Libelle" name="Libelle" placeholder=" Libelle..."
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Coef">Coefficient</label>
+                <input type="int" formControlName="Coef" name="Coef" placeholder=" Coefficient.."
+                    class="form-control">
+            </div>
+
+            <button class="btn btn-success " (click)="onEdit()">Enregistrez</button>
+
+       
+</div>
+<a routerLink="/admin/viewM" class="btn btn-success my-2">Voir la Liste des Matiere</a> 
+</div>
